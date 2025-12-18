@@ -1,0 +1,47 @@
+name: Deploy to GitHub Pages (updated)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare site directory
+        run: |
+          rm -rf public || true
+          mkdir -p public
+          # si ton site a un dossier de build (ex: dist, build, _site), adapte la ligne suivante
+          # rsync -av --progress ./dist/ public/
+          # sinon, copie la racine (exclure .git et .github)
+          rsync -av --progress --exclude='.git' --exclude='.github' --exclude='node_modules' --exclude='README.md' ./ public/
+
+      - name: Diagnostic - list public content
+        run: |
+          echo "=== Contenu de public/ ==="
+          ls -la public || true
+          echo "=== Taille totale de public/ ==="
+          du -sh public || true
+          echo "=== Nombre de fichiers ==="
+          find public -type f | wc -l
+
+      - name: Upload artifact for GitHub Pages
+        # Utiliser la version récente de upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        # Utiliser la version récente de deploy-pages
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEOPLE DEV SOFTWARE | Développement d'applications & Marketing Digital</title>
+    <meta name="description" content="PEOPLE DEV SOFTWARE est spécialisée dans le développement d'applications web, mobiles, le marketing digital, l'infographie, le montage vidéo et la gestion des réseaux sociaux.">
+    <meta name="keywords" content="développement web, applications mobiles, marketing digital, infographie, montage vidéo, community management, réseaux sociaux, startup tech">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://peopledevsoftware.com/">
+    <meta property="og:title" content="PEOPLE DEV SOFTWARE | Solutions Tech Complètes">
+    <meta property="og:description" content="Votre partenaire en développement d'applications et marketing digital.">
+    <meta property="og:image" content="https://peopledevsoftware.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://peopledevsoftware.com/">
+    <meta property="twitter:title" content="PEOPLE DEV SOFTWARE | Solutions Tech Complètes">
+    <meta property="twitter:description" content="Votre partenaire en développement d'applications et marketing digital.">
+    <meta property="twitter:image" content="https://peopledevsoftware.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #1a6dff;
+            --dark-blue: #0a4dbe;
+            --light-blue: #e8f1ff;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --gray: #6c757d;
+            --dark-gray: #343a40;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 10px;
+            --neon-glow: 0 0 10px rgba(26, 109, 255, 0.7), 0 0 20px rgba(26, 109, 255, 0.5), 0 0 30px rgba(26, 109, 255, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--white);
+            perspective: 1000px;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 8s ease infinite;
+            background-size: 200% 200%;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-blue);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%) translateZ(20px);
+            border-radius: 2px;
+            box-shadow: var(--neon-glow);
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(26, 109, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-5px) translateZ(10px);
+            box-shadow: 0 10px 25px rgba(26, 109, 255, 0.5), var(--neon-glow);
+        }
+        
+        section {
+            padding: 80px 0;
+            transform-style: preserve-3d;
+        }
+        
+        /* Header & Navigation avec effet 3D */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(26, 109, 255, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform-style: preserve-3d;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: translateZ(30px) scale(1.05);
+        }
+        
+        .logo-icon {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            animation: rotate3D 20s infinite linear;
+            transform-style: preserve-3d;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            transform-style: preserve-3d;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--primary-blue);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            transform: translateZ(10px);
+            box-shadow: var(--neon-glow);
+        }
+        
+        .nav-links a:hover {
+            transform: translateZ(10px);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-blue);
+            transform-style: preserve-3d;
+            transform: translateZ(10px);
+        }
+        
+        /* Hero Section avec effets 3D avancés */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--light-blue) 0%, rgba(255, 255, 255, 1) 100%);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(26, 109, 255, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(26, 109, 255, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .hero-text {
+            flex: 1;
+            animation: fadeInUp 1s ease-out;
+            transform-style: preserve-3d;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+            max-width: 500px;
+            transform: translateZ(20px);
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            transform-style: preserve-3d;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(26, 109, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(26, 109, 255, 0.2), 0 0 15px rgba(26, 109, 255, 0.3);
+        }
+        
+        .hero-visual {
+            flex: 1;
+            position: relative;
+            height: 500px;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+        }
+        
+        .floating-cube {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotateCube3D 20s infinite linear;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(26, 109, 255, 0.1);
+            border: 2px solid var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-blue);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: inset 0 0 20px rgba(26, 109, 255, 0.2), 0 0 30px rgba(26, 109, 255, 0.1);
+        }
+        
+        .front { transform: translateZ(100px); }
+        .back { transform: rotateY(180deg) translateZ(100px); }
+        .right { transform: rotateY(90deg) translateZ(100px); }
+        .left { transform: rotateY(-90deg) translateZ(100px); }
+        .top { transform: rotateX(90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+        
+        /* Particules 3D flottantes */
+        .particles-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: floatParticle 15s infinite linear;
+            transform-style: preserve-3d;
+        }
+        
+        /* Services Section avec cartes 3D */
+        .services {
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 80%, rgba(26, 109, 255, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            cursor: pointer;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) translateZ(20px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(26, 109, 255, 0.1);
+        }
+        
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-blue);
+            z-index: 2;
+            transform: translateZ(10px);
+            box-shadow: var(--neon-glow);
+        }
+        
+        .service-card:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 109, 255, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .service-card:hover:after {
+            opacity: 1;
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(26, 109, 255, 0.2);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: translateZ(30px) scale(1.1) rotateY(180deg);
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            box-shadow: 0 10px 20px rgba(26, 109, 255, 0.3);
+        }
+        
+        /* About Section avec effets 3D */
+        .about {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            transform-style: preserve-3d;
+        }
+        
+        .about-text {
+            flex: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .about-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            transform-style: preserve-3d;
+        }
+        
+        .stat {
+            text-align: center;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat:hover {
+            transform: translateZ(20px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: block;
+            line-height: 1;
+            text-shadow: 0 5px 15px rgba(26, 109, 255, 0.3);
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .about-visual {
+            flex: 1;
+            position: relative;
+            height: 400px;
+            transform-style: preserve-3d;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+        
+        .shape {
+            position: absolute;
+            background: var(--light-blue);
+            border-radius: 20px;
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 30px rgba(26, 109, 255, 0.1);
+        }
+        
+        .shape-1 {
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            animation: float3D 6s ease-in-out infinite;
+            transform: translateZ(0);
+        }
+        
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 0;
+            right: 0;
+            animation: float3D 8s ease-in-out infinite 1s;
+            transform: translateZ(30px);
+        }
+        
+        .shape-3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            right: 30%;
+            animation: float3D 10s ease-in-out infinite 2s;
+            transform: translateZ(60px);
+        }
+        
+        /* Portfolio Section avec galerie 3D */
+        .portfolio {
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(26, 109, 255, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateZ(20px);
+            box-shadow: 0 5px 15px rgba(26, 109, 255, 0.3);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-15px) translateZ(20px) rotateY(5deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 40px rgba(26, 109, 255, 0.2);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: translateZ(20px) scale(1.05);
+        }
+        
+        .portfolio-info {
+            padding: 25px;
+            background: var(--white);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        /* Testimonials avec effet carrousel 3D */
+        .testimonials {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .testimonial {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin: 0 15px;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial:hover {
+            transform: translateZ(30px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 30px rgba(26, 109, 255, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            transform: translateZ(20px);
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transform-style: preserve-3d;
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(26, 109, 255, 0.2);
+        }
+        
+        .testimonial:hover .client-avatar {
+            transform: translateZ(30px) rotateY(360deg);
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+        }
+        
+        /* Contact Section avec effet 3D */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            transform: translateZ(-50px);
+        }
+        
+        .contact h2:after {
+            background: var(--white);
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .contact-info {
+            flex: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 30px;
+            transform: translateZ(20px);
+        }
+        
+        .contact-details {
+            margin-bottom: 40px;
+            transform-style: preserve-3d;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateZ(20px);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transform-style: preserve-3d;
+            transform: translateZ(10px);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover .contact-icon {
+            transform: translateZ(30px) rotateY(180deg);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            color: var(--dark-gray);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .contact-form:hover {
+            transform: translateZ(30px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            transform-style: preserve-3d;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+            transform: translateZ(10px);
+            box-shadow: 0 5px 15px rgba(26, 109, 255, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer avec effets 3D */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+            transform: translateZ(20px);
+            box-shadow: var(--neon-glow);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+        }
+        
+        .footer-about p {
+            color: #adb5bd;
+            transform: translateZ(10px);
+        }
+        
+        .footer-links h4, .footer-social h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            transform: translateZ(20px);
+        }
+        
+        .footer-links h4:after, .footer-social h4:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-blue);
+            bottom: 0;
+            left: 0;
+            transform: translateZ(10px);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            transform-style: preserve-3d;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-links li:hover {
+            transform: translateZ(10px);
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-blue);
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            transform-style: preserve-3d;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-blue);
+            transform: translateY(-10px) translateZ(20px) rotateY(360deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            transform: translateZ(10px);
+        }
+        
+        /* Nouveaux effets d'animation 3D */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes rotate3D {
+            from { transform: rotateY(0) rotateX(0); }
+            to { transform: rotateY(360deg) rotateX(360deg); }
+        }
+        
+        @keyframes rotateCube3D {
+            0% { transform: translate(-50%, -50%) rotateX(0) rotateY(0) rotateZ(0); }
+            25% { transform: translate(-50%, -50%) rotateX(90deg) rotateY(90deg) rotateZ(90deg); }
+            50% { transform: translate(-50%, -50%) rotateX(180deg) rotateY(180deg) rotateZ(180deg); }
+            75% { transform: translate(-50%, -50%) rotateX(270deg) rotateY(270deg) rotateZ(270deg); }
+            100% { transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+        
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) translateX(0) translateZ(0) rotate(0); }
+            100% { transform: translateY(-100px) translateX(100px) translateZ(100px) rotate(360deg); }
+        }
+        
+        @keyframes float3D {
+            0%, 100% { transform: translateY(0) translateZ(0) rotateX(0) rotateY(0); }
+            25% { transform: translateY(-20px) translateZ(20px) rotateX(5deg) rotateY(5deg); }
+            50% { transform: translateY(0) translateZ(40px) rotateX(0) rotateY(10deg); }
+            75% { transform: translateY(20px) translateZ(20px) rotateX(-5deg) rotateY(5deg); }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(26, 109, 255, 0.7), 0 0 20px rgba(26, 109, 255, 0.5), 0 0 30px rgba(26, 109, 255, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(26, 109, 255, 0.9), 0 0 40px rgba(26, 109, 255, 0.7), 0 0 60px rgba(26, 109, 255, 0.5); }
+        }
+        
+        @keyframes countUp {
+            from { transform: translateZ(0) scale(0.5); opacity: 0; }
+            to { transform: translateZ(0) scale(1); opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px) translateZ(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+        
+        /* Effet de parallaxe pour les sections */
+        .parallax-section {
+            transform-style: preserve-3d;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content, .about-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero-visual, .about-visual {
+                width: 100%;
+                height: 400px;
+            }
+            
+            .floating-cube {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .cube-face {
+                width: 150px;
+                height: 150px;
+                font-size: 2.2rem;
+            }
+            
+            .front { transform: translateZ(75px); }
+            .back { transform: rotateY(180deg) translateZ(75px); }
+            .right { transform: rotateY(90deg) translateZ(75px); }
+            .left { transform: rotateY(-90deg) translateZ(75px); }
+            .top { transform: rotateX(90deg) translateZ(75px); }
+            .bottom { transform: rotateX(-90deg) translateZ(75px); }
+            
+            .service-card:hover {
+                transform: translateY(-10px) translateZ(10px);
+            }
+            
+            .portfolio-item:hover {
+                transform: translateY(-10px) translateZ(10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%) translateZ(0);
+                transition: var(--transition);
+                z-index: 999;
+                transform-style: preserve-3d;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0) translateZ(0);
+            }
+            
+            .hero {
+                padding-top: 130px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .shape-1, .shape-2, .shape-3 {
+                animation: float 6s ease-in-out infinite;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+            
+            .testimonial {
+                padding: 30px 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                <span>PEOPLE DEV SOFTWARE</span>
+            </a>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#about">À propos</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#testimonials">Témoignages</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles-container" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Solutions Tech Innovantes pour Votre Business</h1>
+                    <p>PEOPLE DEV SOFTWARE est spécialisée dans le développement d'applications web, mobiles, le marketing digital, l'infographie, le montage vidéo et la gestion des réseaux sociaux.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn">Discutons de votre projet</a>
+                        <a href="#portfolio" class="btn btn-secondary">Voir nos réalisations</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-cube">
+                        <div class="cube-face front"><i class="fas fa-code"></i></div>
+                        <div class="cube-face back"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="cube-face right"><i class="fas fa-paint-brush"></i></div>
+                        <div class="cube-face left"><i class="fas fa-video"></i></div>
+                        <div class="cube-face top"><i class="fas fa-bullhorn"></i></div>
+                        <div class="cube-face bottom"><i class="fas fa-users"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <p>Création de sites web et applications web sur mesure, responsives et optimisées pour les moteurs de recherche.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Applications Mobiles</h3>
+                    <p>Développement d'applications iOS et Android natives et cross-platform avec des interfaces utilisateur intuitives.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing Digital</h3>
+                    <p>Stratégies de marketing digital complètes pour augmenter votre visibilité en ligne et générer des leads qualifiés.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Infographie</h3>
+                    <p>Création de designs graphiques percutants pour votre identité visuelle, supports marketing et interfaces utilisateur.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Montage Vidéo</h3>
+                    <p>Production et montage vidéo professionnel pour vos campagnes publicitaires, tutoriels et présentations.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Management</h3>
+                    <p>Gestion professionnelle de vos réseaux sociaux pour engager votre audience et renforcer votre présence en ligne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>À Propos de Nous</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Notre Mission: Transformer Vos Idées en Réalité Digitale</h3>
+                    <p>Fondée en 2024, PEOPLE DEV SOFTWARE est une startup innovante qui allie expertise technique et créativité pour offrir des solutions digitales complètes à ses clients.</p>
+                    <p>Notre équipe multidisciplinaire de développeurs, designers et spécialistes du marketing travaille en synergie pour créer des expériences digitales mémorables et performantes.</p>
+                    <p>Nous croyons en l'innovation continue, la qualité du code et l'importance d'une stratégie digitale cohérente pour le succès de nos clients.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projets Réalisés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">Clients Satisfaits</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-label">Experts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Services Principaux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>Nos Réalisations</h2>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Développement Web</button>
+                <button class="filter-btn" data-filter="mobile">Applications Mobiles</button>
+                <button class="filter-btn" data-filter="design">Design & Infographie</button>
+                <button class="filter-btn" data-filter="video">Montage Vidéo</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Plateforme E-commerce</h3>
+                        <p>Développement d'une plateforme e-commerce complète avec système de paiement en ligne et gestion des stocks.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-img">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Application Santé & Bien-être</h3>
+                        <p>Application mobile de suivi de santé avec synchronisation des données médicales et rappels personnalisés.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-img">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Identité Visuelle Startup</h3>
+                        <p>Création complète d'identité visuelle : logo, charte graphique, templates et supports marketing.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-img">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Campagne Vidéo Publicitaire</h3>
+                        <p>Production et montage d'une série de vidéos publicitaires pour une campagne de lancement de produit.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Tableau de Bord Analytique</h3>
+                        <p>Application web de visualisation de données avec tableaux de bord interactifs et rapports automatisés.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-img">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Application de Transport</h3>
+                        <p>Application de réservation de transport avec géolocalisation, paiement intégré et système de notation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Témoignages Clients</h2>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "PEOPLE DEV SOFTWARE a transformé notre présence en ligne. Leur équipe a développé une application mobile qui a doublé nos ventes en seulement 3 mois."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Marie </h4>
+                            <p>Directrice Marketing, JARDIN DE PAULEEN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Parlons de Votre Projet</h3>
+                    <p>Nous sommes toujours enthousiastes à l'idée de collaborer sur de nouveaux projets innovants. Contactez-nous pour discuter de vos besoins.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Notre Adresse</h4>
+                                <p>LENDI, DOUALA, CAMEROUN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+237 693 942 854</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>peopledevorganisationsoftware@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Votre email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Sujet">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Votre message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Envoyer le message</button>
+                        <a class="whatsapp" href="https://wa.me/237693942854" target="_blank">💬 Nous contacter sur WhatsApp</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>PEOPLE DEV SOFTWARE</span>
+                    </div>
+                    <p>Votre partenaire de confiance pour des solutions digitales innovantes et performantes. Nous transformons vos idées en réalité.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Suivez-Nous</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PEOPLE DEV SOFTWARE. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0) translateZ(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px) translateZ(0)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            
+            // In a real application, you would send this data to a server
+            // For this example, we'll just show an alert
+            alert(`Merci ${name}! Votre message a été envoyé. Nous vous répondrons à ${email} sous peu.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Initialize animations on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .portfolio-item, .testimonial');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0) translateZ(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .portfolio-item, .testimonial').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px) translateZ(0)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Run on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Create particles effect
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size
+                const size = Math.random() * 10 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random color
+                const opacity = Math.random() * 0.3 + 0.1;
+                particle.style.backgroundColor = `rgba(26, 109, 255, ${opacity})`;
+                
+                // Random animation duration and delay
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Animate statistics counter
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000; // 2 seconds
+                const steps = 60;
+                const increment = target / steps;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + '+';
+                    }
+                }, duration / steps);
+            });
+        }
+        
+        // Mouse move parallax effect
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            // Apply subtle parallax to certain elements
+            const floatingCube = document.querySelector('.floating-cube');
+            if (floatingCube) {
+                floatingCube.style.transform = `translate(-50%, -50%) rotateX(${mouseY * 20}deg) rotateY(${mouseX * 20}deg)`;
+            }
+            
+            // Apply parallax to hero text
+            const heroText = document.querySelector('.hero-text');
+            if (heroText) {
+                heroText.style.transform = `translateZ(20px) translateX(${mouseX * -10}px) translateY(${mouseY * -10}px)`;
+            }
+        });
+        
+        // Initialize everything when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Animate stats when about section is in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            const aboutSection = document.querySelector('.about');
+            if (aboutSection) {
+                observer.observe(aboutSection);
+            }
+            
+            // Add hover effect to service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.zIndex = '1';
+                });
+            });
+        });
+        
+        // Add scroll parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            // Apply parallax to hero visual
+            const heroVisual = document.querySelector('.hero-visual');
+            if (heroVisual) {
+                heroVisual.style.transform = `translateZ(${rate * 0.1}px)`;
+            }
+            
+            // Apply parallax to floating shapes
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                const speed = 0.3 + (index * 0.1);
+                shape.style.transform = `translateY(${rate * speed * 0.1}px) translateZ(${index * 20}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
